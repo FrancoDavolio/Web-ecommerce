@@ -2,16 +2,16 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer class="text-center bg-dark text-light py-3">
-      <p class="m-0 text-secondary">
+    <footer className="text-center bg-dark text-light py-3">
+      <p className="m-0 text-secondary">
         <small>
           By
-          <a href="https://github.com/earias08" class="text-secondary">
+          <a href="https://github.com/earias08" className="text-secondary">
             Franco Davolio
           </a>
         </small>
       </p>
-      <p class="m-0 text-secondary">
+      <p className="m-0 text-secondary">
         <small>&copy; Todos los derechos reservados</small>
       </p>
     </footer>

@@ -10,7 +10,7 @@ function App() {
     <BrowserRouter>
       <Menu></Menu>
       <Routes>
-        <Route exact path="/" element={<Inicio></Inicio>}></Route>
+        <Route exact path="/inicio" element={<Inicio></Inicio>}></Route>
         <Route exact path="/admin" element={<Admin></Admin>}></Route>
       </Routes>
       <Footer></Footer>

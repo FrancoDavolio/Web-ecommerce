@@ -1,0 +1,181 @@
+.button {
+  display: flex;
+}
+
+.box {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  transition: all 0.8s;
+  cursor: pointer;
+  position: relative;
+  background: #96e6a1;
+  overflow: hidden;
+}
+
+.box:before {
+  content: "S";
+  position: absolute;
+  top: 0;
+  background: #0f0f0f;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(100%);
+  transition: transform 0.4s;
+}
+
+.box:nth-child(2)::before {
+  transform: translateY(-100%);
+  content: "U";
+}
+
+.box:nth-child(3)::before {
+  content: "M";
+}
+
+.box:nth-child(4)::before {
+  transform: translateY(-100%);
+  content: "M";
+}
+
+.box:nth-child(5)::before {
+  content: "E";
+}
+
+.box:nth-child(6)::before {
+  content: "R";
+}
+
+.button:hover .box:before {
+  transform: translateY(0);
+}
+
+.contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.flip-card {
+  border: none;
+  background-color: transparent;
+  width: 190px;
+  height: 254px;
+  perspective: 1000px;
+  font-family: sans-serif;
+  margin: 20px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+
+.flip-card-back {
+  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+  transform: rotateY(180deg);
+}
+
+.cardt {
+  width: 190px;
+  height: 254px;
+  padding: 0.8em;
+  background: #f5f5f5;
+  position: relative;
+  overflow: visible;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.cardt-img {
+  background-color: #ffcaa6;
+  height: 40%;
+  width: 100%;
+  border-radius: 0.5rem;
+  transition: 0.3s ease;
+}
+
+.cardt-info {
+  text-align: start;
+  margin: 1px;
+}
+
+svg {
+  width: 20px;
+  height: 20px;
+}
+
+.cardt-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ddd;
+}
+
+/*Text*/
+.text-title {
+  margin: 5px;
+  font-weight: 900;
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+.text-body {
+  font-size: 0.9em;
+  /* padding-bottom: 10px; */
+}
+
+/*Button*/
+.cardt-button {
+  border: 1px solid #252525;
+  display: flex;
+  padding: 0.3em;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: 0.3s ease-in-out;
+}
+
+/*Hover*/
+.cardt-img:hover {
+  transform: translateY(-25%);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 13px 47px -5px,
+    rgba(0, 0, 0, 0.24) 0px 8px 16px -8px;
+}
+
+.cardt-button:hover {
+  border: 1px solid #d4fc79;
+  background-color: #d4fc79;
+}
